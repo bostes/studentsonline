@@ -39,23 +39,22 @@
 		ga('send', 'pageview');
 	</script>
 	<script type="text/javascript">
-		function processAjaxData(response, urlPath){
-    document.getElementById("content").innerHTML = response.html;
-    document.title = response.pageTitle;
-    window.history.pushState(
+		function changeurl(){
+		document.title = "hi";
+		window.history.pushState(
         {
-            "html":response.html,
-            "pageTitle":response.pageTitle
+           "pageTitle":"hi"
         },
         "",
         urlPath
    );
-}
+		}
+
 	</script>
 	
 </head>
 
-<body class="layout-home" onload="processAjaxData()">
+<body class="layout-home" onload="changeurl()">
 
 	<div id="wrap">
 
