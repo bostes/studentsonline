@@ -38,6 +38,20 @@
 		ga('create', 'UA-98421-8', 'auto');
 		ga('send', 'pageview');
 	</script>
+	<script type="text/javascript">
+		function processAjaxData(response, urlPath){
+    document.getElementById("content").innerHTML = response.html;
+    document.title = response.pageTitle;
+    window.history.pushState(
+        {
+            "html":response.html,
+            "pageTitle":response.pageTitle
+        },
+        "",
+        urlPath
+   );
+}
+	</script>
 	
 </head>
 
